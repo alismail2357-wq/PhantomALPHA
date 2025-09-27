@@ -67,7 +67,7 @@ function checkTime(timingString) {
 
 //Checking all Boxes First
 
-
+1234SGR
 
 
      charPress("c",false,()=>{
@@ -356,3 +356,4 @@ if (theCase.value === "Ouled Askeur") {
 
 
  
+
