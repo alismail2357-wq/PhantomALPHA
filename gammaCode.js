@@ -67,7 +67,7 @@ function checkTime(timingString) {
 
 //Checking all Boxes First
 
-1234SGR
+
 
 
      charPress("c",false,()=>{
@@ -326,6 +326,82 @@ if (theCase.value === "Ouled Askeur") {
   theCase.value = "Boucif Ouled Askeur";
 }
 
+if (theCase.value === "Tassadane") {
+  theCase.value = "Tassadane Haddada";
+}
+
+if (theCase.value === "Oran Othmania") {
+  theCase.value = "Othmania";
+}
+
+if (theCase.value === "EL MARSA RD") {
+  theCase.value = "EL MARSA";
+}
+
+if (theCase.value === "Timezrit il Matten") {
+  theCase.value = "Timezrit";
+}
+
+if (theCase.value === "Belhadef") {
+  theCase.value = "Bouraoui Belhadef";
+}
+
+if (theCase.value === "Arres") {
+  theCase.value = "Amira Arres";
+}
+
+if (theCase.value === "Adekar Kebouche") {
+  theCase.value = "Adekar";
+}
+
+if (theCase.value === "Adekar Kebouche") {
+  theCase.value = "Adekar";
+}
+
+if (theCase.value === "Grarem") {
+  theCase.value = "Grarem Gouga";
+}
+
+if (theCase.value === "MENEA") {
+  theCase.value = "MENEA OULED ATIA";
+}
+
+if (theCase.value === "Rais Hamidou R2") {
+  theCase.value = "Rais Hamidou";
+}
+
+if (theCase.value === "Annaba RP") {
+  theCase.value = "Annaba";
+}
+
+if (theCase.value === "Tendla el Berd") {
+  theCase.value = "Tendla";
+}
+
+if (theCase.value === "Chebaita") {
+  theCase.value = "Chebaita Mokhtar";
+}
+
+if (theCase.value === "DERGANA R3") {
+  theCase.value = "DERGANA";
+}
+
+if (theCase.value === "Chebaita") {
+  theCase.value = "Chebaita Mokhtar";
+}
+
+if (theCase.value === "Chebaita") {
+  theCase.value = "Chebaita Mokhtar";
+}
+
+if (theCase.value === "Chebaita") {
+  theCase.value = "Chebaita Mokhtar";
+}
+
+
+
+
+
 
 
 })
@@ -356,4 +432,3 @@ if (theCase.value === "Ouled Askeur") {
 
 
  
-
