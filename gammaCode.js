@@ -70,10 +70,9 @@ function checkTime(timingString) {
 
 
 
- //COLLECT
-    charPress("c",false,()=>{
+     charPress("c",false,()=>{
   
-  const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
+      const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
   for (task of taskList){
   let timingString=task.children[13].innerText
     if(checkTime2Minutes(timingString)==true) {
@@ -81,7 +80,7 @@ function checkTime(timingString) {
   }
 }
 
-    const claimBtn = document.querySelector("#claimTask")
+   const claimBtn = document.querySelector("#claimTask")
     claimBtn.click()
      setTimeout(()=>{
         const confirm = document.querySelector("body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
@@ -96,6 +95,18 @@ function checkTime(timingString) {
   },150)
   },150)
 })
+
+
+
+
+     
+  
+ 
+
+
+ 
+
+
 
    charPress("x",false,()=>{
   
@@ -233,23 +244,87 @@ if (theCase.value === "Constantine El Gamas") {
   theCase.value = "El Gamas";
 }
 
-if (theCase.value === "Les Eucaliptus  Cherarba") {
+if (theCase.value === "Les Eucaliptus Cherarba") {
   theCase.value = "Les Eucaliptus";
 }
 
 
+if (theCase.value === "Constantine Cite Ziadia") {
+  theCase.value = "Ziadia";
+}
+
+if (theCase.value === "Constantine RP") {
+  theCase.value = "Constantine";
+}
+
+if (theCase.value === "Constantine Sidi Mabrouk") {
+  theCase.value = "Sidi Mabrouk";
+}
+
+if (theCase.value === "Constantine Coudiat") {
+  theCase.value = "Boudraa Saleh";
+}
 
 
+if (theCase.value === "IBN BADIS") {
+  theCase.value = "IBN BADIS El Haria";
+}
 
 
+if (theCase.value === "Oran Hai Badr") {
+  theCase.value = "El Badr";
+}
 
 
+if (theCase.value === "Oran el Hamri") {
+  theCase.value = "El Hamri";
+}
 
 
+if (theCase.value === "Oran el Makkari") {
+  theCase.value = "El Makkari";
+}
 
 
+if (theCase.value === "Oran Ibn Sinna") {
+  theCase.value = "Ibn Sinna";
+}
+
+if (theCase.value === "Ain Beida Djebel Halfa") {
+  theCase.value = "Ain Beida Harriche";
+}
 
 
+if (theCase.value === "Oran Seddikia") {
+  theCase.value = "Seddikia";
+}
+
+if (theCase.value === "Oran H.L.M. Seddikia") {
+  theCase.value = "Seddikia";
+}
+
+if (theCase.value === "Oran Imam el Houari") {
+  theCase.value = "Sidi El Houari";
+}
+
+if (theCase.value === "Oran Sidi el Bachir") {
+  theCase.value = "Sidi El Bachir";
+}
+
+if (theCase.value === "Les Eucaliptus  Cherarba") {
+  theCase.value = "Les Eucaliptus";
+}
+
+if (theCase.value === "BORJ EL KIFAN R1") {
+  theCase.value = "BORJ EL KIFAN";
+}
+if (theCase.value === "Ghebala M cid Aicha") {
+  theCase.value = "Ghebala";
+}
+
+if (theCase.value === "Ouled Askeur") {
+  theCase.value = "Boucif Ouled Askeur";
+}
 
 
 
@@ -260,7 +335,7 @@ if (theCase.value === "Les Eucaliptus  Cherarba") {
  
 
     
-   
+
 
 
 
