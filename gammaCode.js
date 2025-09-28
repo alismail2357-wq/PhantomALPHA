@@ -1,3 +1,8 @@
+//GLOBALS 
+
+let countToday=0;
+
+
 //Key Pressed
 function charPress(char, ctrlReq, callback) {
   document.addEventListener('keydown', (event) => {
@@ -98,6 +103,23 @@ function checkTime(timingString) {
 
 
 
+
+//Approve TASK SHORTCUT
+
+
+ charPress("+",false,()=>{
+ let approveBtn = document.querySelector('#submitEditPrepaidID')
+ approveBtn.click()
+
+ setTimeout(()=>{
+  let okApprove = document.querySelector('body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary')
+  okApprove.click()
+},200)
+
+countToday++
+console.log(countToday)
+
+})
 
      
   
@@ -409,7 +431,7 @@ if (theCase.value === "Chebaita") {
     
       
  
-
+//213771953563	
     
 
 
