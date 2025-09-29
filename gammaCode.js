@@ -2,6 +2,28 @@
 
 let countToday=0;
 
+//n min checking 
+
+function checkTimeWithinNMinutes(timingString, n) {
+  // Format expected: 'DD-MM-YYYY HH:mm'
+  const parts = timingString.trim().split(' ');
+  if (parts.length !== 2) return false;
+
+  const [datePart, timePart] = parts;
+  const [day, month, year] = datePart.split('-').map(Number);
+  const [hours, minutes] = timePart.split(':').map(Number);
+
+  // Create Date object (month is 0-indexed)
+  const inputDate = new Date(year, month - 1, day, hours, minutes);
+  if (isNaN(inputDate.getTime())) return false;
+
+  const now = new Date();
+  const diffMs = Math.abs(now - inputDate);
+  const diffMinutes = diffMs / (1000 * 60);
+
+  return diffMinutes <= n;
+}
+
 
 //Key Pressed
 function charPress(char, ctrlReq, callback) {
@@ -80,7 +102,7 @@ function checkTime(timingString) {
       const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
   for (task of taskList){
   let timingString=task.children[13].innerText
-    if(checkTime2Minutes(timingString)==true) {
+    if( checkTime2Minutes(timingString)==true) {
          task.children[0].click()
   }
 }
@@ -100,6 +122,36 @@ function checkTime(timingString) {
   },150)
   },150)
 })
+
+
+//time 7 min
+
+  charPress("c",true,()=>{
+  
+      const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
+  for (task of taskList){
+  let timingString=task.children[13].innerText
+    if( checkTimeWithinNMinutes(timingString,20)==true) {
+         task.children[0].click()
+  }
+}
+
+   const claimBtn = document.querySelector("#claimTask")
+    claimBtn.click()
+     setTimeout(()=>{
+        const confirm = document.querySelector("body > div.bootbox.modal.fade.bootbox-confirm.in > div > div > div.modal-footer > button.btn.btn-primary")
+  confirm.click()
+  setTimeout(()=>{
+      const ok = document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button")
+      ok.click()
+      setTimeout(()=>{
+          const success=document.querySelector("body > div.bootbox.modal.fade.bootbox-alert.in > div > div > div.modal-footer > button")
+          success.click()
+      },150)
+  },150)
+  },150)
+})
+
 
 
 
@@ -434,7 +486,7 @@ if (theCase.value === "Chebaita") {
 //213771953563	
     
 
-
+//checkTime2Minutes(timingString)==true &&
 
 
 
