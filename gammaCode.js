@@ -327,7 +327,7 @@ if (theCase.value === "Constantine Cite Ziadia") {
   theCase.value = "Ziadia";
 }
 
-if (theCase.value === "Constantine RP") {
+if (theCase.value === "Constantine RP" || theCase.value === "Constantine Wilaya") {
   theCase.value = "Constantine";
 }
 
@@ -478,6 +478,9 @@ if (theCase.value === "Chebaita") {
 
 
 
+
+
+
 })
 
     
@@ -492,7 +495,38 @@ if (theCase.value === "Chebaita") {
 
   
   
+
+
+//NON INDICATED WILAYAS
+
  
+
+
+charPress('control', true, (() => {
+  // Separate indexes for each city
+  let currentIndexConstantine = 0;
+  let currentIndexOran = 0;
+
+  return () => {
+    let communes = document.getElementsByClassName('select2-chosen');
+    let comval = communes[1]?.innerText || '';
+    const theCase = document.querySelector('#address1');
+    if (!theCase) return;
+
+    if (comval === 'Constantine RP' || comval === 'Constantine Wilaya') {
+      const stringList = ['Ali Mendjli', 'Boudraa Saleh', 'Cite 5 juillet'];
+
+      theCase.value = stringList[currentIndexConstantine];
+      currentIndexConstantine = (currentIndexConstantine + 1) % stringList.length;
+
+    } else if (comval === 'Oran RP' || comval === 'Oran Wilaya') {
+      const stringList = ['Bouamama', 'Ennour', 'El Emir'];
+
+      theCase.value = stringList[currentIndexOran];
+      currentIndexOran = (currentIndexOran + 1) % stringList.length;
+    }
+  };
+})());
 
 
 
