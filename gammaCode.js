@@ -131,7 +131,7 @@ function checkTime(timingString) {
       const taskList = document.getElementsByClassName("ui-widget-content jqgrow ui-row-ltr")
   for (task of taskList){
   let timingString=task.children[13].innerText
-    if( checkTimeWithinNMinutes(timingString,20)==true) {
+    if( checkTimeWithinNMinutes(timingString,7)==true ) {
          task.children[0].click()
   }
 }
@@ -514,7 +514,7 @@ charPress('control', true, (() => {
     if (!theCase) return;
 
     if (comval === 'Constantine RP' || comval === 'Constantine Wilaya') {
-      const stringList = ['Ali Mendjli', 'Boudraa Saleh', 'Cite 5 juillet'];
+      const stringList = ['Ali Mendjli', 'Boudraa Saleh', 'Cite 5 juillet', 'CITE ETTOUTE', 'SIDI RACHED'];
 
       theCase.value = stringList[currentIndexConstantine];
       currentIndexConstantine = (currentIndexConstantine + 1) % stringList.length;
@@ -530,7 +530,7 @@ charPress('control', true, (() => {
 
 
 
-
+//&& task.children[9].innerText=='fulfilled'
 
 
   
